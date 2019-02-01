@@ -1,0 +1,25 @@
+ion-slides{
+  height: 200px;
+}
+i {
+  font-size: 40px;
+}
+ion-col{
+  background-color: #F9FAFB;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin: 2px;
+}
+ion-col:hover{
+  background-color: #ddd;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin: 2px;
+}
+.applist {
+  text-align: center;
+}
+.applist div {
+  font-size: 14px;
+  color: #878787;
+}

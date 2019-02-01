@@ -1,6 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { TabsPage } from './tabs.page';
+import {ApplicationPagePageModule} from '../application-page/application-page.module';
+import {FindPagePageModule} from '../find-page/find-page.module';
+import {UserPagePageModule} from '../user-page/user-page.module';
 
 const routes: Routes = [
   {
@@ -8,42 +11,42 @@ const routes: Routes = [
     component: TabsPage,
     children: [
       {
-        path: 'tab1',
+        path: 'find',
         children: [
           {
             path: '',
-            loadChildren: '../tab1/tab1.module#Tab1PageModule'
+            loadChildren: '../find-page/find-page.module#FindPagePageModule'
           }
         ]
       },
       {
-        path: 'tab2',
+        path: 'application',
         children: [
           {
             path: '',
-            loadChildren: '../tab2/tab2.module#Tab2PageModule'
+            loadChildren: '../application-page/application-page.module#ApplicationPagePageModule'
           }
         ]
       },
       {
-        path: 'tab3',
+        path: 'user',
         children: [
           {
             path: '',
-            loadChildren: '../tab3/tab3.module#Tab3PageModule'
+            loadChildren: '../user-page/user-page.module#UserPagePageModule'
           }
         ]
       },
       {
         path: '',
-        redirectTo: '/tabs/tab1',
+        redirectTo: '/tabs/find',
         pathMatch: 'full'
       }
     ]
   },
   {
     path: '',
-    redirectTo: '/tabs/tab1',
+    redirectTo: '/tabs/find',
     pathMatch: 'full'
   }
 ];
